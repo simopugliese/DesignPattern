@@ -14,4 +14,9 @@ public abstract class Character{
     public void move() {
         System.out.println("I'm moving!");
     }
+
+    //con i setter possiamo settare dinamicamente i fight behavior
+    public void setFightBehavior(FightBehavior fightBehavior) {
+        this.fightBehavior = fightBehavior;
+    }
 }

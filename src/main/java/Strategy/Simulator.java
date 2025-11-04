@@ -1,5 +1,6 @@
 package Strategy;
 
+import Strategy.Behavior.KnifeBehavior;
 import Strategy.Character.Character;
 import Strategy.Character.Dragon;
 import Strategy.Character.King;
@@ -17,6 +18,10 @@ public class Simulator{
         dragon.performFight();
         dragon.move();
         //move() potrebbe stampare un messaggio personalizzato fornendo un'implementazione nella classe Dragon
+
+        //la classe astratta Character ha il setter per fight behavior
+        dragon.setFightBehavior(new KnifeBehavior()); //adesso anche il drago attacca con il coltello
+        dragon.performFight();
 
     }
 }
