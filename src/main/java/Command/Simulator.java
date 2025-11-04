@@ -18,5 +18,7 @@ public class Simulator {
 
         remoteOff.setCommand(lightOff);
         remoteOff.buttonWasPressed();
+
+        remoteOn.setCommand(new NoCommand()); //possiamo decidere che questo remote non faccia nulla
     }
 }
