@@ -13,7 +13,9 @@ public class Manager {
     }
 
     public void printMenu() {
-        for (Menu menu : menus) {
+        Iterator<Menu> menuIterator = menus.iterator();
+        while (menuIterator.hasNext()) {
+            Menu menu = menuIterator.next();
             printMenu(menu.createIterator());
         }
     }
